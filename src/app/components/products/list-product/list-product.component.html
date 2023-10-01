@@ -1,0 +1,18 @@
+<div class="container" *ngIf="products">
+  <table class="table ">
+     <tr>
+         <th>ID</th>
+         <th>Name</th>
+         <th>Price</th>
+         <th>Qunatity</th>
+         <th>Selected</th>
+         <th>Available</th>
+     </tr>
+     <app-product-item
+     *ngFor="let product of products;let order = index"
+     [product]="product"
+     [order]="order"
+     (productEmitter)="onActionEvent($event)"
+     style="display:contents"></app-product-item>
+  </table>
+</div>

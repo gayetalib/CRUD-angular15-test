@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subject, takeUntil } from 'rxjs';
+import { ActionEvent, ProductActionType } from 'src/app/enums/product.enum';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -107,5 +108,45 @@ export class ProductsComponent implements OnInit{
 
   onEdit(product:Product){
     this.router.navigate(['/edit/' + product.id ])
+  }
+
+  onActionEvent($event:ActionEvent){
+     console.log($event);
+     switch ($event.type) {
+      case ProductActionType.GET_ALL_PRODUCTS:
+        this.onGetProducts();
+        break;
+
+      case ProductActionType.GET_SELECTED_PRODUCTS:
+      this.onGetSelectedProducts();
+      break;
+
+      case ProductActionType.GET_AVAILABLE_PRODUCTS:
+      this.onGetAvailableProducts();
+      break;
+
+      case ProductActionType.SEARCH_PRODUCT:
+      this.onSearch($event.payload);
+      break;
+
+      case ProductActionType.NEW_PRODUCT:
+      this.onNewProduct();
+      break;
+
+      case ProductActionType.DELETE_PRODUCT:
+      this.onDelete($event.payload);
+      break;
+
+      case ProductActionType.SELECT_PRODUCT:
+      this.onSelect($event.payload);
+      break;
+
+      case ProductActionType.EDIT_PRODUCT:
+      this.onEdit($event.payload);
+      break;
+
+      default:
+        break;
+     }
   }
 }

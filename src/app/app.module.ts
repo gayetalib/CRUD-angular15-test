@@ -12,6 +12,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
+import { NavbarProductComponent } from './components/products/navbar-product/navbar-product.component';
+import { ListProductComponent } from './components/products/list-product/list-product.component';
+import { ProductItemComponent } from './components/products/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { EditProductComponent } from './components/products/edit-product/edit-pr
     ProductsComponent,
     NotFoundComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    NavbarProductComponent,
+    ListProductComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
