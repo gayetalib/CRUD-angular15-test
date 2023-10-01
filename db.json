@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 4300,
+      "quantity": 100,
+      "selected": true,
+      "available": true
+    },
+    {
+      "name": "Smartphone",
+      "price": "500",
+      "quantity": 100,
+      "selected": true,
+      "available": true,
+      "id": 2
+    },
+    {
+      "name": "Cloud",
+      "price": "6000",
+      "quantity": 100,
+      "selected": true,
+      "available": true,
+      "id": 3
+    },
+    {
+      "name": "Charger",
+      "price": 5000,
+      "quantity": 250,
+      "selected": true,
+      "available": false,
+      "id": 4
+    },
+    {
+      "name": "Botel",
+      "price": "2500",
+      "quantity": "12",
+      "selected": true,
+      "available": false,
+      "id": 5
+    },
+    {
+      "name": "T-shirt",
+      "price": "9000",
+      "quantity": "34",
+      "selected": true,
+      "available": true,
+      "id": 6
+    }
+  ]
+}
